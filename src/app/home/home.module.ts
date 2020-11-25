@@ -4,9 +4,10 @@ import { IonicModule } from '@ionic/angular';
 import { FormsModule } from '@angular/forms';
 import { HomePage } from './home.page';
 
+import { SMS } from '@ionic-native/sms/ngx';
+
 import { HomePageRoutingModule } from './home-routing.module';
-
-
+import { HomeService } from './home.service';
 @NgModule({
   imports: [
     CommonModule,
@@ -14,6 +15,7 @@ import { HomePageRoutingModule } from './home-routing.module';
     IonicModule,
     HomePageRoutingModule
   ],
-  declarations: [HomePage]
+  declarations: [HomePage],
+  providers: [SMS, HomeService ]
 })
 export class HomePageModule {}
